@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CodePen - Demo Flexbox 3</title>
+        <style>
+            body{padding: 2em;}
+ 
+            .headerContainer{
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background: rgb(228, 15, 15);
+                font-weight: bold;
+                padding: 1opx;
+            }
+
+            .footerContainer{
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background: lightgreen;
+                font-weight: bold;
+                padding: 1opx;
+            }
+
+            .mainContainer{
+                display: flex;
+                flex-flow: row wrap;
+                text-align: center;
+                font-weight: bold;
+                
+            }
+                                                        
+            .mainContentItem{
+            text-align: left;
+            background: deepskyblue;
+            }
+
+            article{
+            padding: 10px;
+            margin: 10px;
+            background: lightskyblue;
+            }
+
+            .sideBarLeftItem{ background: rgb(238, 225, 42);}
+            .sideBarRightItem{background: hotpink;}
+            .sideBarItem{ flex: 1 0 0; border:0px solid green;}
+            .mainContentItem{flex: 3 0px;}
+            .sideBarLeftItem{ order:1;}
+            .sideBarRightItem{ order:3;}
+            .mainContentItem{order:2;}
+                        
+        </style>
+    </head>
+    <body>
+        <header class="headerContainer"><h1>HEADER - Sample Flexbox Example</h1></header>
+        <div class="mainContainer">
+            <section class="mainContentItem">
+                <article>
+                    <h2>First Article</h2>
+
+                    <p>It is always prescribed that you begin with a short introduction of the topic; it’s meaning to be precise.</p>
+                </article>
+                <article>
+                    <h2>Second Article</h2>
+
+                    <p> Now this part can be written in either one or two paragraphs.</p>
+                </article>
+                <article>
+                    <h2>Third Article</h2>
+
+                    <p>You are required to do a complete analysis of the subject matter in question.</p>
+                </article>
+            </section>
+            <sidebar class="sideBarItem sideBarLeftItem"><div class="center"><p>Left Side Bar</p></div></sidebar>
+            <sidebar class="sideBarItem sideBarRightItem"><div class="center"><p>Right Side Bar</p></div></sidebar>
+        </div>
+        <footer class="footerContainer">Footer</footer>
+        <script type="text/javascript"></script>
+    </body>
+</html>
